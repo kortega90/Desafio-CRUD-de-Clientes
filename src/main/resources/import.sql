@@ -1,0 +1,10 @@
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Luz Diaz','17840007',3000.0,'1962-08-08',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Kengi Ortega','46540815',230.50,'1990-04-11',0);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Jorge Rodriguez','68540311',1890.90,'1992-07-06',0);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Violeta Escalantes','24720382',12000,'1922-07-24',6);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Nicanor Acevedo','34830565',5000.0,'1958-08-16',2);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Jessica Olivera','80062211867',27000.0,'1991-04-25',0);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Julia Acevedo','18420389',0.0,'1918-08-20',8);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Nicanor Ortega','09432379',8000.0,'1910-12-04',12);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Betsy Ortega','41464357',3500.0,'1984-11-22',1);
+INSERT INTO tb_client (name,cpf,income,birth_date,children) VALUES ('Silvia Ortega','32521563',10000.54,'1984-02-14',2);
