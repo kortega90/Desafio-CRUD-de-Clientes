@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class ClientService {
 
@@ -19,5 +21,9 @@ public class ClientService {
         Client client = repository.findById(id).get();
         return new ClientDTO(client);
     }
-
+    @Transactional(readOnly = true)
+    public List<ClientDTO> findAll () {
+        List <Client> rst = repository.findAll();
+        return rst.stream().map(x -> new ClientDTO(x)).toList();
+    }
 }
