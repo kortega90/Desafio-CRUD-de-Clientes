@@ -5,8 +5,11 @@ import com.kortega90.desafioCliente.dto.ClientDTO;
 import com.kortega90.desafioCliente.entities.Client;
 import com.kortega90.desafioCliente.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 
@@ -22,8 +25,8 @@ public class ClientService {
         return new ClientDTO(client);
     }
     @Transactional(readOnly = true)
-    public List<ClientDTO> findAll () {
-        List <Client> rst = repository.findAll();
-        return rst.stream().map(x -> new ClientDTO(x)).toList();
+    public Page<ClientDTO> findAll (Pageable pageable) {
+        Page<Client> rst = repository.findAll(pageable);
+        return rst.map(x -> new ClientDTO(x));
     }
 }
