@@ -3,15 +3,19 @@ package com.kortega90.desafioCliente.dto;
 
 
 import com.kortega90.desafioCliente.entities.Client;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.LocalDate;
 
 public class ClientDTO {
 
     private Long id;
+    @NotBlank(message = "campo requerido")
     private String name;
     private String cpf;
     private Double income;
+    @PastOrPresent(message = "data futura invalida")
     private LocalDate birthDate;
     private Integer children;
 
